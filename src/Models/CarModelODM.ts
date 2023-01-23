@@ -23,4 +23,15 @@ export default class CarODM {
     const result = await this.model.create({ ...car });
     return result;    
   };
+
+  getAll = async () => {
+    const result = await this.model.find();
+    return result;
+  };
+
+  getById = async (id: string) => {
+    const result = await this.model.findById(id);
+
+    return result;
+  };
 }
