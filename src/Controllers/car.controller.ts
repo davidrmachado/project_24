@@ -59,7 +59,7 @@ export default class CarController {
     }
   };
 
-  public async updateById() {
+  updateById = async () => {
     try {
       const { params: { id }, body } = this.req;
       const result = await this.carService.updateById(id, body);
@@ -70,5 +70,5 @@ export default class CarController {
     } catch (error) {
       return this.res.status(422).json({ message: 'Invalid mongo id' });
     }
-  }
+  };
 }
