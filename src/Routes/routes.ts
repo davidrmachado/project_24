@@ -17,4 +17,10 @@ route.put('/cars/:id', (req, res, next) => new CarController(req, res, next).upd
 route.post('/motorcycles', (req, res, next) => 
   new MotorcycleController(req, res, next).postMotorcycle());
 
+route.get('/motorcycles', (req, res, next) => 
+  new MotorcycleController(req, res, next).getAllMotorcycles());
+  
+route.get('/motorcycles/:id', (req, res, next) => 
+  new MotorcycleController(req, res, next).getMotorcycleById());
+
 export default route;

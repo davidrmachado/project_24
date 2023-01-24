@@ -1,4 +1,4 @@
-interface IVehicle {
+export default interface IVehicle {
   id?: string,
   model: string,
   year: number,
@@ -6,5 +6,3 @@ interface IVehicle {
   status?: boolean,
   buyValue: number,
 }
-
-export default IVehicle;
